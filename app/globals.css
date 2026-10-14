@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+html { scroll-behavior: smooth; }
+body { background: #050912; color: #fff; }
+
+.grad-text { background: linear-gradient(90deg,#22d3ee,#6366f1,#a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-btn { background: linear-gradient(90deg,#06b6d4,#6366f1,#7c3aed); transition: filter .2s, transform .2s; }
+.grad-btn:hover:not(:disabled) { filter: brightness(1.15); transform: translateY(-1px); }
+.glass { background: rgba(255,255,255,.035); border: 1px solid rgba(99,179,237,.16); backdrop-filter: blur(8px); }
+.glow { box-shadow: 0 0 50px rgba(56,189,248,.12); }
+.bg-aurora { background:
+  radial-gradient(ellipse 60% 40% at 20% 0%, rgba(99,102,241,.30), transparent 60%),
+  radial-gradient(ellipse 50% 40% at 85% 10%, rgba(6,182,212,.22), transparent 60%),
+  radial-gradient(ellipse 60% 50% at 50% 100%, rgba(168,85,247,.15), transparent 60%); }
+.bg-dots { background-image: radial-gradient(rgba(148,163,184,.12) 1px, transparent 1px); background-size: 28px 28px; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.fade-up { animation: fadeUp .55s ease both; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.float { animation: float 5s ease-in-out infinite; }
+@keyframes shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+.shimmer { background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.10) 37%, rgba(255,255,255,.04) 63%); background-size: 800px 100%; animation: shimmer 1.6s infinite linear; }
+@keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+.scanline { position: absolute; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #22d3ee, transparent); box-shadow: 0 0 12px #22d3ee; animation: scan 1.8s ease-in-out infinite alternate; }
+@keyframes dash { to { stroke-dashoffset: -20; } }
+.dash-flow { animation: dash 1s linear infinite; }
